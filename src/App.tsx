@@ -3,14 +3,14 @@ import "./App.css";
 import Yes from "./Yes";
 function App() {
   const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
+    "Are you sure?🤔",
+    "Really sure??😒",
+    "Pookie please...🙃",
+    "Just think about it..!😘",
+    "If you say no, I will be really sad...😓",
+    "I will be very sad...😞",
+    "I will be very very very sad...😭",
+    "Ok fine, I will stop asking...😔",
     "Just kidding, say yes please! ❤️",
   ];
   const gifurl = [
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      {!showLoveMessage && (
+      {!showLoveMessage && showNoButton && (
         <div className="container">
           <h1>Dear Hayatim, will you be my forever valentine?</h1>
           <div className="buttons">
@@ -75,8 +75,6 @@ function App() {
           </div>
         </div>
       )}
-
-      {/* Love Message Component */}
       {showLoveMessage && <Yes />}
     </>
   );

@@ -41,3 +41,25 @@ h1 {
   border-radius: 10px;
   margin-top: 20px;
 }
+.header_text {
+  font-size: 3em;
+  color: #d32f2f;
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .yes-button,
+  .no-button {
+    font-size: 1.2em; /* Reduce button font size for smaller screens */
+    margin-top: 10px;
+    /* padding: 8px 16px; */
+  }
+
+  .gif_container img {
+    max-width: 90%; /* Make the GIF slightly smaller on mobile */
+    margin-top: 15px; /* Reduce top margin for better spacing */
+  }
+}
