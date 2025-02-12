@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Yes from "./Yes";
 function App() {
   const messages = [
     "Are you sure?",
@@ -50,28 +51,33 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <h1>Dear Hayatim, will you be my forever valentine?</h1>
-        <div className="buttons">
-          <button
-            className="yes-button"
-            onClick={handleYesClick}
-            style={{ fontSize: `${yesButtonSize}%` }}
-          >
-            Yes
-          </button>
-          <button
-            className="no-button"
-            onClick={handleNoButton}
-            style={{ fontSize: `${noButtonSize}%` }}
-          >
-            {noButtonText}
-          </button>
+      {!showLoveMessage && (
+        <div className="container">
+          <h1>Dear Hayatim, will you be my forever valentine?</h1>
+          <div className="buttons">
+            <button
+              className="yes-button"
+              onClick={handleYesClick}
+              style={{ fontSize: `${yesButtonSize}%` }}
+            >
+              Yes
+            </button>
+            <button
+              className="no-button"
+              onClick={handleNoButton}
+              style={{ fontSize: `${noButtonSize}%` }}
+            >
+              {noButtonText}
+            </button>
+          </div>
+          <div className="gif_container">
+            <img src={GifUrl} alt="Cute GIF" />
+          </div>
         </div>
-        <div className="gif_container">
-          <img src={GifUrl} alt="Cute GIF" />
-        </div>
-      </div>
+      )}
+
+      {/* Love Message Component */}
+      {showLoveMessage && <Yes />}
     </>
   );
 }
